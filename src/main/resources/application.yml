@@ -1,0 +1,30 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+feign:
+  client:
+    config:
+      default:
+        readTimeout: 25000
+        connectTimeout: 25000
+
+kakao:
+  search-api:
+    url: https://dapi.kakao.com
+    app-key: 95e07decc68a42fdad1188ea5ba9aa6f
+
+naver:
+  search-api:
+    url: https://openapi.naver.com
+    client:
+      id: 64ua9Gx8birgnMvOxiKs
+      secret: Ub5FMxi52S
+
+keyword:
+  redis-key-prefix:
+    view: "ranking:view"
+    distributed-lock: "ranking:distributed-lock:"
+    minute-ranking: "ranking:minute:"
+    accumulate-ranking: "ranking:accumulate:"
